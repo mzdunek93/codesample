@@ -31,14 +31,6 @@ class ChatContainer extends React.Component {
 }
 
 $(document).on("ready page:load", () => {
-  $('.datepicker').datepicker({
-    format: "dd MM yyyy",
-    clearBtn: true
-  })
-  $('.datepicker').on('focus', () =>
-    $('div.datepicker').css('top', parseInt($('div.datepicker').css('top')) + 55)
-  )
-  $('#datatables').DataTable()
   let element = $('#chat-container')[0];
   if(element) {
     component = React.render(<ChatContainer />, element)
